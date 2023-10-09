@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Major Requirement List</title>
+</head>
+
+<body>
+    <h1>Current Major Requirements</h1>
+    <hr>
+    <ul>
+        {% for item in major_requirements_list %}
+        <li>
+            <span>Major Name: </span> <span>{{ item.MajorName }}</span>
+            <br>
+            <span>Major Course ID: </span><span>{{ item.MajCourseID }}</span>
+            <br>
+            <span>Major Course Name: </span><span>{{ item.MajCourseName }}</span>
+            <br>
+            <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+            <br>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

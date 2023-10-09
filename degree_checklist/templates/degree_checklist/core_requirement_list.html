@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Core Requirements List</title>
+</head>
+
+<body>
+    <h1>Current Core Requirements</h1>
+    <hr>
+    <ul>
+        {% for item in core_requirement_list %}
+        <li>
+            <span>Core Coure ID: </span> <span>{{ item.CoreCourseID }}</span>
+            <br>
+            <span>Core Course Name: </span><span>{{ item.CoreCourseName }}</span>
+            <br>
+            <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

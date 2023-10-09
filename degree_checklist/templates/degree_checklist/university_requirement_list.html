@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Univeristy Requirements List</title>
+</head>
+
+<body>
+    <h1>Current University Requirements</h1>
+    <hr>
+    <ul>
+        {% for item in university_requirement_list %}
+        <li>
+            <span>Univeristy Name: </span><span>{{ item.UniversityName }}</span>
+            <br>
+            <span>Univeristy Course ID: </span><span>{{ item.UniCourseID }}</span>
+            <br>
+            <span>Univeristy Course Name: </span><span>{{ item.UniCourseName }}</span>
+            <br>
+            <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+            <br>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Degree List</title>
+</head>
+
+<body>
+    <h1>Current Degrees</h1>
+    <hr>
+    <ul>
+        {% for item in degree_list %}
+        <li>
+            <span>Degree Name: </span> <span>{{ item.DegreeName }}</span>
+            <br>
+            <span>Degree Year: </span><span>{{ item.DegreeYear }}</span>
+            <br>
+            <span>University Name: </span><span>{{ item.UniversityName }}</span>
+            <br>
+            <span>Department Name: </span><span>{{ item.DepartmentName }}</span>
+            <br>
+            <span>Major Name: </span><span>{{ item.MajorName }}</span>
+            <br>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

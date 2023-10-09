@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Student List</title>
+</head>
+
+<body>
+    <h1>Current Student Records</h1>
+    <hr>
+    <ul>
+        {% for item in student_list %}
+        <li>
+            <span>WTID: </span> <span>{{ item.WTID }}</span>
+            <br>
+            <span>First Name: </span><span>{{ item.FirstName }}</span>
+            <br>
+            <span>Last Name: </span><span>{{ item.LastName }}</span>
+            <br>
+            <span>Degree Name: </span><span>{{ item.DegreeName }}</span>
+            <br>
+            <span>Degree Year: </span><span>{{ item.DegreeYear }}</span>
+            <br>
+            <span>Transfer Student: </span><span>{{ item.TransferStudent }}</span>
+            <br>
+            <span>Courses Completed: </span><span>{{ item.CoursesCompleted }}</span>
+            <br>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

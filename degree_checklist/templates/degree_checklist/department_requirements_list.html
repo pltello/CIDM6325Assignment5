@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Department Requirements List</title>
+</head>
+
+<body>
+    <h1>Current Department Requirements</h1>
+    <hr>
+    <ul>
+        {% for item in department_requirements_list %}
+        <li>
+            <span>Department ID: </span> <span>{{ item.DepartmentID }}</span>
+            <br>
+            <span>Department Name: </span><span>{{ item.DepartmentName }}</span>
+            <br>
+            <span>Department Course ID: </span><span>{{ item.DepCourseID }}</span>
+            <br>
+            <span>Department Course Name: </span><span>{{ item.DepCourseName }}</span>
+            <br>
+            <span>Years Required: </span><span>{{ item.YearsRequired }}</span>
+            <br>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
