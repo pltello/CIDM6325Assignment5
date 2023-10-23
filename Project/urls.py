@@ -17,6 +17,9 @@ Including another URLconf
 from degree_checklist import views
 from django.contrib import admin
 from django.urls import path
+from degree_checklist.views import (StudentRecordFormView, DegreeRecordFormView, CoreRecordFormView,
+                                    UniRecordFormView, DepRecordFormView, MajRecordFormView, FormSuccessView)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +35,16 @@ urlpatterns = [
          views.department_requirements_list, name='department_requirements_list'),
     path('degree_checklist/major_requirements_list',
          views.major_requirements_list, name='major_requirements_list'),
+    path('new_student_record', StudentRecordFormView.as_view(),
+         name='student_record_form'),
+    path('new_degree_record', DegreeRecordFormView.as_view(),
+         name='degree_record_form'),
+    path('new_core_req_record', CoreRecordFormView.as_view(),
+         name='core_req_record_form'),
+    path('new_university_record', UniRecordFormView.as_view(),
+         name='university_record_form'),
+    path('new_department_record', DepRecordFormView.as_view(),
+         name='department_record_form'),
+    path('new_major_record', MajRecordFormView.as_view(), name='major_record_form'),
+    path('entry_success', FormSuccessView.as_view(), name='form_success'),
 ]

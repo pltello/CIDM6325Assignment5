@@ -35,19 +35,19 @@ class Core_Requirements(models.Model):
     YearsRequired = models.IntegerField(help_text="List of Years Required")
 
     def __str__(self):
-        return self.CoreCourseID
+        return f"{self.CoreCourseID} {self.CoreCourseName}"
 
 
 class University_Requirements(models.Model):
     UniversityName = models.CharField(
-        max_length=50, help_text="University Name")
+        max_length=75, help_text="University Name")
     UniCourseID = models.CharField(max_length=10, help_text="Course ID")
     UniCourseName = models.CharField(
         max_length=75, help_text="Course Name", null=True)
     YearsRequired = models.IntegerField(help_text="List of Years Required")
 
     def __str__(self):
-        return self.UniversityName
+        return f"{self.UniCourseID} {self.UniCourseName}"
 
 
 class Department_Requirements(models.Model):
@@ -60,7 +60,7 @@ class Department_Requirements(models.Model):
     YearsRequired = models.IntegerField(help_text="List of Years Required")
 
     def __str__(self):
-        return self.DepartmentID
+        return f"{self.DepCourseID} {self.DepCourseName}"
 
 
 class Major_Requirements(models.Model):
@@ -71,4 +71,4 @@ class Major_Requirements(models.Model):
     YearsRequired = models.IntegerField(help_text="List of Years Required")
 
     def __str__(self):
-        return self.MajorName
+        return f"{self.MajCourseID} {self.MajCourseName}"
